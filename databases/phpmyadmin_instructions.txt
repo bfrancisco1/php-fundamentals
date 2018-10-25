@@ -1,0 +1,15 @@
+PDO v MySQLi
+
+MySQLi:  can be procedural, don't have to use an object to connect, connects only to MySQL derivatives
+
+PDO:  client side prepared statements, connects to all supported databases
+        newer, as of 5.3
+
+Commands for myphpadmin
+sudo apt-get update
+    2  mysql -V
+    3  
+    4  sudo apt-get install mysql-server
+    5  sudo apt-get install phpmyadmin
+
+connect to http://localhost/phpmyadmin

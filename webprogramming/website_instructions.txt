@@ -1,0 +1,2 @@
+create a symlink from the html files to the apache location
+sudo ln -s /vagrant/Clip4/ /var/www/html/phpfun
