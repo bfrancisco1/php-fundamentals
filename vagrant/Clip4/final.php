@@ -1,3 +1,13 @@
+<?php
+
+echo "<pre>";
+print_r($_POST);
+echo "</pre>";
+
+echo $_POST['author'];
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,27 +24,28 @@
         <div id="Body">
             <div>
                 <label>Favorite Author:</label> 
-                <span> </span>
+                <!-- short hand php, entering the properties of the _POST varible (this was the object returned by the post call) -->
+                <span> <?=$_POST['author']?>&nbsp;</span>
             </div>		
             <div>
                 <label>Favorite Century:</label>
-                <span> </span>
+                <span> <?=$_POST['century']?>&nbsp;</span>
             </div>
             <div>
                 <label>Comments:</label>
-                <span> </span>
+                <span> <?=$_POST['comments']?>&nbsp;</span>
             </div>
             <div>
                 <label>Name:</label>
-                <span> </span>
+                <span> <?=$_POST['name']?>&nbsp;</span>
             </div>
             <div>
                 <label>E-mail Address:</label>
-                <span> </span>
+                <span> <?=$_POST['email']?>&nbsp;</span>
             </div>
             <div>
                 <label>Receive Newsletter:</label>
-                <span> </span>
+                <span> <?=$_POST['newsletter']?>&nbsp;</span>
             </div>
         </div>
 	</body>
