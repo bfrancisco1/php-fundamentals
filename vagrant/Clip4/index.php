@@ -36,7 +36,8 @@ Join Our Literature Mailing List
 </h2>
 </div>        
 <div id="Body">
-<!-- get method stores data in an associative array $_GET variable -->
+<!-- get method stores data in an associative array $_GET variable, variables in URL, this is insecure -->
+<!-- <form method="get" action="index.php"> -->
 <!-- post method stores data in an associative array $_POST variable -->  
 <!-- changing the action to send the user to index.php instead of final.php, index.php is where the form validation occurs -->          
 <form method="post" action="index.php" >
