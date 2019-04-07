@@ -1,10 +1,26 @@
 <?php
-
+include 'assets/include.php'
+//<!-- pre tag to make array look pretty -->
 echo "<pre>";
-print_r($_POST);
+print_r($_SESSION);
+//print_r($_GET);
 echo "</pre>";
 
-echo $_POST['author'];
+//echo $_POST['author'];
+
+//check if the formPostData variable has been set, if not, send the user back to the form page
+if (isset($_SESSION['formPostData'])){
+    $postedData = $_SESSION['formPostData'];
+    //you destroy or unset the sessions variable after you've assigned it to the $postedData
+    //this way, the user can only visit the final.php page once after submitting the form data
+    //otherwise, the user could return to final.php without having submitted form data
+    unset($_SESSION['formPostData']);
+} else {
+    header('Location: index.php');
+}
+//getting the formdata from the session variable rather than the post variable
+$postedData = $_SESSION['formPostData'];
+
 
 ?>
 
@@ -25,27 +41,27 @@ echo $_POST['author'];
             <div>
                 <label>Favorite Author:</label> 
                 <!-- short hand php, entering the properties of the _POST varible (this was the object returned by the post call) -->
-                <span> <?=$_POST['author']?>&nbsp;</span>
+                <span> <?=$postedData['author']?>&nbsp;</span>
             </div>		
             <div>
                 <label>Favorite Century:</label>
-                <span> <?=$_POST['century']?>&nbsp;</span>
+                <span> <?=$postedData['century']?>&nbsp;</span>
             </div>
             <div>
                 <label>Comments:</label>
-                <span> <?=$_POST['comments']?>&nbsp;</span>
+                <span> <?=$postedData['comments']?>&nbsp;</span>
             </div>
             <div>
                 <label>Name:</label>
-                <span> <?=$_POST['name']?>&nbsp;</span>
+                <span> <?=$postedData['name']?>&nbsp;</span>
             </div>
             <div>
                 <label>E-mail Address:</label>
-                <span> <?=$_POST['email']?>&nbsp;</span>
+                <span> <?=$postedData['email']?>&nbsp;</span>
             </div>
             <div>
                 <label>Receive Newsletter:</label>
-                <span> <?=$_POST['newsletter']?>&nbsp;</span>
+                <span> <?=$postedData['newsletter']?>&nbsp;</span>
             </div>
         </div>
 	</body>
