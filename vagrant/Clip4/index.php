@@ -1,15 +1,22 @@
 <?php
+include 'assets/include.php'
+ 
 
 require 'assets/dbinfo.php';
 
 $query = "SELECT first_name, last_name, pen_name FROM Authors ORDER BY first_name";
 $resultObject = $connection->query($query);
 
+//check if $_POST is empty, if post is empty, don't do form validator since user has not entered anything yet
 if (count($_POST) > 0 )
 {
     //if POST property is not an empty string
     if($_POST['email'] != "")
     {
+        //creating a session variable, populating with a yes to signify the form was posted
+        $_SESSION['formWasPosted'] = 'yes';
+        //setting a key equal to the post data so the post data can be transferred to the next page
+        $_SESSION['formPostData'] = $_POST;
         //send the user to the final.php page, use the header function
         header('Location: final.php');
     }
@@ -37,10 +44,10 @@ Join Our Literature Mailing List
 </div>        
 <div id="Body">
 <!-- get method stores data in an associative array $_GET variable, variables in URL, this is insecure -->
-<!-- <form method="get" action="index.php"> -->
+<form method="post" action="index.php">
 <!-- post method stores data in an associative array $_POST variable -->  
 <!-- changing the action to send the user to index.php instead of final.php, index.php is where the form validation occurs -->          
-<form method="post" action="index.php" >
+<!--<form method="post" action="index.php" > -->
 <div>
 <label>Favorite Author:</label>
 <select name="author">
