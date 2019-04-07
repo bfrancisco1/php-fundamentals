@@ -1,0 +1,51 @@
+ sudo apt-get update
+    2  sudo apt-get install mysql-server
+    3  sudo apt-get install phpmyadmin
+    4  sudo vim /etc/mysql/my.cnf
+    5  mysql -h localhost -u root -pSongohan1 PHPFundamentals
+    6  sudo vim /etc/mysql/my.cnf
+    7  sudo systemctl restart mysql
+    8  restart mysql
+    9  sudo restart mysql
+   10  sudo status mysql
+   11  sudo vim /etc/mysql/my.cnf
+   12  tail -f /var/log/mysql/error.log
+   13  sudo tail -f /var/log/mysql/error.log
+   14  ss -a
+   15  ss -a | grep 3306
+   16  ss -a | grep mysql
+   17  sudo vim /etc/mysql/my.cnf
+   18  sudo restart mysql
+   19  sudo vim /etc/my.cnf
+   20  sudo vim /etc/mysql/my.cnf
+   21  sudo restart mysql
+   22  htop
+   23  sudo apt-get install htop
+   24  htop
+   25  sudo vim /etc/mysql/my.cnf
+   26  sudo restart mysql
+   27  sudo vim /etc/mysql/my.cnf
+   28  sudo restart mysql
+   29  sudo ln -s /vagrant/Clip4/ /var/www/html/phpfun
+   30  ls
+   31  ls -al
+   32  cd /
+   33  ls
+   34  cd vagrant/
+   35  ls
+   36  cd Clip4/
+   37  ls
+   38  cd ..
+   39  ls
+   40  cd Clip4/
+   41  ls
+   42  vim index.php
+   43  ~:q!
+   44  reboot
+   45  sudo reboot
+   46  ls
+   47  ls a-l
+   48  pwd
+   49  cd /vagrant
+   50  ls
+   51  history
