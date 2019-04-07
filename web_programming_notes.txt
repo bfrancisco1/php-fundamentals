@@ -1,0 +1,10 @@
+<form method="get" action="index.php" >
+    form submission method is get, action is where the submission will take the user
+    get method will store the data in an associative array $_GET variable
+
+form validation:
+sending the form data in $_POST to index.php then to final.php, the $_POST data will be lost when sent to final.php
+
+session state:
+use session_start() on each page that needs access to the session
+moved the session_start() function call to an include file
