@@ -13,3 +13,23 @@ sudo apt-get update
     5  sudo apt-get install phpmyadmin
 
 connect to http://localhost/phpmyadmin
+
+add to my.cnf
+comment out these lines
+#skip-external-locking
+#bind-address
+
+create phpfundamentals users
+grant all privileges
+
+create phpfundamentals databases, collation
+
+create authors tables with 4 columns
+
+columns:
+id, int, primary index, auto_increment
+first_name, varchar, 50
+last_name, varchar, 50
+pen_name, varchar, 100, can be null
+
+INSERT INTO `Authors`(`first_name`, `last_name`, ) VALUES ('Samuel Langhorne,'Clemens')
